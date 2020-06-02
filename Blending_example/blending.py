@@ -18,7 +18,7 @@ image_4 = np.zeros([300, 300, 4], dtype=np.uint8)
 #transparency coefficient
 d = 0.5
 
-#alpha blending - second image over first with transparency d
+#alpha blending - second image over first with transparency alpha
 for x in range(200):
     for y in range(100):
         image_3[y, x] = d * image_2[y, x] + (1 - d) * image_1[y, x]
