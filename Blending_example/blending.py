@@ -18,18 +18,17 @@ image_4 = np.zeros([300, 300, 4], dtype=np.uint8)
 #transparency coefficient
 alpha = 128
 
-<<<<<<< HEAD
-=======
 #we need a copy of array in uint16 because when we multiply array by alpha we will exceed uint8
 image_clone_1 = np.zeros([100, 200, 4], dtype=np.uint16)
 image_clone_2 = np.zeros([100, 200, 4], dtype=np.uint16)
->>>>>>> fdc343cecda108a90f6ce74340beb80c2e57cbf5
+
 #alpha blending - second image over first with transparency alpha
 for x in range(200):
     for y in range(100):
         image_clone_1[y, x] = image_1[y, x]
         image_clone_2[y, x] = image_2[y, x]
         image_3[y,x] = (alpha * image_clone_2[y, x] + (256 - alpha) * image_clone_1[y, x]) >> 8
+
 
 #shift and blend of two images
 #first image coordinates
