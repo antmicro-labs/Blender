@@ -101,3 +101,12 @@ As an example we blended the following two pictures together:
 The result is as follows:
 
 ![lena_with_flower](https://user-images.githubusercontent.com/61863994/80916912-e4e56280-8d5b-11ea-97e8-c66da0fafa7a.png)
+
+Converting equation to integers 
+```python
+for x in range(200):
+    for y in range(100):
+        image_clone_1[y, x] = image_1[y, x]
+        image_clone_2[y, x] = image_2[y, x]
+        image_3[y,x] = (alpha * image_clone_2[y, x] + (256 - alpha) * image_clone_1[y, x]) >> 8
+```
